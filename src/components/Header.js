@@ -5,6 +5,7 @@ import { Avatar } from '@material-ui/core';
 import { useStateValue } from '../StateProvider';
 
 function Header() {
+  //eslint-disable-next-line
   const [{ user }, dispatch] = useStateValue();
   return (
     <div className='header'>

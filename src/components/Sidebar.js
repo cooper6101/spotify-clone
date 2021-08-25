@@ -7,6 +7,7 @@ import LibraryMusicIcon from '@material-ui/icons/LibraryMusic';
 import { useStateValue } from '../StateProvider';
 
 function Sidebar() {
+  //eslint-disable-next-line
   const [{ playlists }, dispatch] = useStateValue();
 
   return (

@@ -8,6 +8,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 function Body({ spotify }) {
+  //eslint-disable-next-line
   const [{ discover_weekly }, dispatch] = useStateValue();
 
   return (
@@ -32,7 +33,10 @@ function Body({ spotify }) {
 
         {/* list of songs */}
         {discover_weekly?.tracks.items.map((item) => (
-          <SongRow track={item.track} />
+          <SongRow
+            key={discover_weekly.tracks.items.indexOf(item)}
+            track={item.track}
+          />
         ))}
       </div>
     </div>
